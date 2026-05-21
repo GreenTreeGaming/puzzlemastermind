@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import rawBorders from "@/data/borders.json";
 
+const borderMap = rawBorders as Record<string, string[]>;
 const BORDERS: Record<string, Set<string>> = {};
 
-for (const key in rawBorders) {
-  BORDERS[key] = new Set(rawBorders[key]);
+for (const key in borderMap) {
+  BORDERS[key] = new Set(borderMap[key]);
 }
 
 const COUNTRIES: Record<string, [number, number]> = {

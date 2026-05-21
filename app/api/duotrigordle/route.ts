@@ -88,8 +88,18 @@ function getBestGuessGlobal(
   return bestWord;
 }
 
+interface DuotrigordleRequestBody {
+  guess?: string;
+  feedbacks?: string[];
+  boards?: string[][];
+}
+
 export async function POST(req: NextRequest) {
-  const { guess, feedbacks, boards } = await req.json();
+  const {
+    guess = "",
+    feedbacks = [],
+    boards = [],
+  }: DuotrigordleRequestBody = await req.json();
 
   /**
    * boards: string[][]
@@ -120,7 +130,7 @@ export async function POST(req: NextRequest) {
 
   // 🧠 check if everything solved
   const allSolved = newBoards.every(
-    (b) => b.length <= 1
+    (board) => board.length <= 1
   );
 
   if (allSolved) {
