@@ -1,6 +1,6 @@
-# SarvaWordleSolver
+# Puzzle Mastermind
 
-SarvaWordleSolver is a Next.js 16 app that bundles a set of puzzle solvers and game strategy tools behind a single interface. It began as a Wordle helper, but the codebase now includes solvers for geography, word games, math puzzles, and strategy engines for board and card games.
+Puzzle Mastermind is a Next.js 16 app that bundles a set of puzzle solvers and game strategy tools behind a single interface. It began as a Wordle helper, but the codebase now includes solvers for geography, word games, math puzzles, and strategy engines for board and card games.
 
 The project uses:
 
